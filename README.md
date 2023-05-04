@@ -18,18 +18,16 @@ For our final project in CS598 Deep Learning in Healthcare, we attempted to repr
 
 ### The data folder contains the following files:
  - DLH Final Project Demo Notebook.ipynb - The demo notebook we created for the final project.
- - DIAGNOSES_ICD.csv - MIMIC dataset.
- - PRESCRIPTIONS.csv - MIMIC dataset.
- - PROCEDURES_ICD.csv - MIMIC dataset.
  - drug-atc.csv - Mapping files for drug code transformation.
- - drug-DDI.csv - Mapping files for drug code transformation.
  - ndc2atc_level4.csv - Mapping files for drug code transformation.
  - ndc2rxnorm_mapping.txt - Mapping files for drug code transformation.
  - data_final.pkl - Final clean data for the models.
  - ddi_A_final.pkl - Drug-drug adjacency matrix constructed from DDI dataset.
  - ehr_adj_final.pkl - Drug-drug adjacency matrix constructed from EHR dataset.
- - records_final.pkl - Input data with four dimension (patient_idx, visit_idx, medical modal, medical id) where medical model equals 3 made of diagnosis, procedure and drug.
+ - records_final.pkl - Input data with four dimensions (patient_idx, visit_idx, medical modal, medical id) where medical model equals 3 made of diagnosis, procedure and drug.
  - voc_final.pkl - The vocabulary list to transform medical word to corresponding idx.
+ 
+ DIAGNOSES_ICD.csv, PRESCRIPTIONS.csv, PROCEDURES_ICD.csv and drug-DDI.csv are necessary files. They are not included here due to the size limit, but can be downloaded from [MIMIC](https://mimic.mit.edu/docs/gettingstarted/) and [DDI data](https://www.dropbox.com/s/8os4pd2zmp2jemd/drug-DDI.csv?dl=0).
  
 ### Base models:
  
@@ -64,4 +62,4 @@ python train_GAMENet.py --model_name GAMENet --resume_path Epoch_{}_JA_{}_DDI_{}
   year={2018}
 }
 
-The original code can be found at [here](https://github.com/sjy1203/GAMENet). 
+The original code can be found [here](https://github.com/sjy1203/GAMENet). 
